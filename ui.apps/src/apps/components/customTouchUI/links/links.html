@@ -1,0 +1,23 @@
+<h1>Links  </h1>
+
+<sly data-sly-use.link="${'com.bgm.core.models.LinkComponent'}" >
+
+            <sly data-sly-list="${link.multifeildlist}">
+
+
+---------------Multideild Count : ${itemList.count}--------------
+
+<p><a href="${item.link}.html" target=${item.select}> ${item.text} </a></p>
+
+<h2><a href="${item.link}.html" target=${item.select}> ${item.title}</a></h2>
+
+
+<sly data-sly-test="${item.urlcheckbox == 'true' }"><a href="${item.link}.html" target=${item.select}> URL : ${item.link} </a> 
+</sly>
+
+
+<p>${item.description @context='html'} </p>
+
+<sly data-sly-call="${templates.placeholder @ isEmpty = !text, classAppend='cmp-text'}"></sly>
+            </sly>
+        </sly>

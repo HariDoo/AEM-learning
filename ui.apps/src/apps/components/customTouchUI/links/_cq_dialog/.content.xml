@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Links Component"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    extraClientlibs="[clientlib.checkbox]">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <displayoptions
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Display Options"
+                        sling:resourceType="granite/ui/components/coral/foundation/well"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <Title
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Title"
+                                        name="./title"/>
+                                </items>
+                            </column>
+                        </items>
+                    </displayoptions>
+                    <linklist
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Link List"
+                        sling:resourceType="granite/ui/components/coral/foundation/well"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <multifeild
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true"
+                                fieldLabel="Link List Item ">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./multifeild">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <Title
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Link Title :"
+                                                    name="./title"/>
+                                                <link
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                    fieldDescription="Select Url for the link"
+                                                    fieldLabel="Link "
+                                                    name="./link"/>
+                                                <urlcheckbox
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                    fieldDescription="Check to enable the URL Link"
+                                                    fieldLabel="New Window"
+                                                    name="./urlcheckbox"
+                                                    uncheckedValue="false"
+                                                    value="true"/>
+                                                <description
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                    fieldLabel="Title"
+                                                    name="./title"/>
+                                                <thumbnail
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                    fieldDescription="Select Url for the link"
+                                                    fieldLabel="Link "
+                                                    name="./link"/>
+                                            </items>
+                                        </column>
+                                    </items>
+                                </field>
+                            </multifeild>
+                        </items>
+                    </linklist>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>
